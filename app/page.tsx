@@ -28,17 +28,17 @@ export default function HomePage() {
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-row gap-3 justify-center items-center flex-wrap">
+        <div className="flex flex-row gap-3 justify-center items-center max-w-2xl mx-auto px-4">
           <Button
             asChild
-            className="bg-salmon-300 hover:bg-salmon-400 text-white font-semibold shadow-lg hover:shadow-xl transition-all"
+            className="bg-salmon-300 hover:bg-salmon-400 text-white font-semibold shadow-lg hover:shadow-xl transition-all flex-1"
             size="lg"
           >
             <a
               href="/menu.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2"
+              className="flex items-center justify-center gap-2"
             >
               <FileText className="w-5 h-5" />
               Ver Menú
@@ -46,14 +46,14 @@ export default function HomePage() {
           </Button>
           <Button
             asChild
-            className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all"
+            className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all flex-1"
             size="lg"
           >
             <a
               href="https://wa.me/525559603719"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2"
+              className="flex items-center justify-center gap-2"
             >
               <MessageCircle className="w-5 h-5" />
               WhatsApp
@@ -204,7 +204,7 @@ export default function HomePage() {
                 </ul>
                 <div className="mt-4 bg-salmon-300 border border-salmon-400 rounded-full px-4 py-2 inline-block">
                   <span className="text-white font-semibold">
-                    Desde: $25.00 mx
+                    Desde: $25.00 MXN
                   </span>
                 </div>
               </CardContent>
@@ -295,37 +295,41 @@ export default function HomePage() {
                   </li>
                 </ul>
                 <div className="mt-6 pt-4 border-t border-emerald-200 max-w-md mx-auto">
-                  <p className="text-sm text-emerald-800 font-semibold mb-3 px-3">
+                  <p className="text-sm text-emerald-800 font-semibold mb-3 text-left">
                     Opciones de Proteína:
                   </p>
                   <ul className="text-sm text-emerald-700 space-y-2">
-                    <li className="flex items-start justify-between gap-3 py-1.5 px-3 rounded-lg hover:bg-emerald-100/30 transition-colors">
-                      <span className="flex-1">Atún (en agua)</span>
+                    <li className="flex items-start justify-between gap-3 py-1.5 rounded-lg hover:bg-emerald-100/30 transition-colors">
+                      <span className="flex-1 text-left">Atún (en agua)</span>
                       <span className="font-medium whitespace-nowrap">$80</span>
                     </li>
-                    <li className="flex items-start justify-between gap-3 py-1.5 px-3 rounded-lg hover:bg-emerald-100/30 transition-colors">
-                      <span className="flex-1">Queso Panela</span>
+                    <li className="flex items-start justify-between gap-3 py-1.5 rounded-lg hover:bg-emerald-100/30 transition-colors">
+                      <span className="flex-1 text-left">Queso Panela</span>
                       <span className="font-medium whitespace-nowrap">$55</span>
                     </li>
-                    <li className="flex items-start justify-between gap-3 py-1.5 px-3 rounded-lg hover:bg-emerald-100/30 transition-colors">
-                      <span className="flex-1">Queso de Cabra</span>
+                    <li className="flex items-start justify-between gap-3 py-1.5 rounded-lg hover:bg-emerald-100/30 transition-colors">
+                      <span className="flex-1 text-left">Queso de Cabra</span>
                       <span className="font-medium whitespace-nowrap">$90</span>
                     </li>
-                    <li className="py-1.5 px-3">Pechuga Asada / Empanizada</li>
-                    <li className="py-1.5 px-3">Salmón</li>
-                    <li className="flex items-start justify-between gap-3 py-1.5 px-3 rounded-lg hover:bg-emerald-100/30 transition-colors">
-                      <span className="flex-1">Proteína Extra</span>
+                    <li className="py-1.5 text-left">
+                      Pechuga Asada / Empanizada
+                    </li>
+                    <li className="py-1.5 text-left">Salmón</li>
+                    <li className="flex items-start justify-between gap-3 py-1.5 rounded-lg hover:bg-emerald-100/30 transition-colors">
+                      <span className="flex-1 text-left">Proteína Extra</span>
                       <span className="font-medium whitespace-nowrap">$20</span>
                     </li>
-                    <li className="flex items-start justify-between gap-3 py-1.5 px-3 rounded-lg hover:bg-emerald-100/30 transition-colors">
-                      <span className="flex-1">Vegetal o crocante extra</span>
+                    <li className="flex items-start justify-between gap-3 py-1.5 rounded-lg hover:bg-emerald-100/30 transition-colors">
+                      <span className="flex-1 text-left">
+                        Vegetal o crocante extra
+                      </span>
                       <span className="font-medium whitespace-nowrap">$7</span>
                     </li>
                   </ul>
                 </div>
                 <div className="mt-4 bg-salmon-300 border border-salmon-400 rounded-full px-4 py-2 inline-block">
                   <span className="text-white font-semibold">
-                    Desde: $130.00 mx
+                    Desde: $130.00 MXN
                   </span>
                 </div>
               </CardContent>
@@ -452,7 +456,7 @@ export default function HomePage() {
                 </div>
                 <div className="mt-4 bg-salmon-300 border border-salmon-400 rounded-full px-4 py-2 inline-block">
                   <span className="text-white font-semibold">
-                    Desde: $45.00 mx
+                    Desde: $45.00 MXN
                   </span>
                 </div>
               </CardContent>
@@ -552,7 +556,7 @@ export default function HomePage() {
                 </div>
                 <div className="mt-4 bg-salmon-300 border border-salmon-400 rounded-full px-4 py-2 inline-block">
                   <span className="text-white font-semibold">
-                    Desde: $60.00 mx
+                    Desde: $60.00 MXN
                   </span>
                 </div>
               </CardContent>
@@ -615,7 +619,9 @@ export default function HomePage() {
                 href="https://wa.me/525559603719"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="flex items-center gap-2"
               >
+                <MessageCircle className="w-5 h-5" />
                 WhatsApp
               </a>
             </Button>
@@ -623,7 +629,10 @@ export default function HomePage() {
               asChild
               className="bg-salmon-300 hover:bg-salmon-400 text-white"
             >
-              <a href="tel:+525559603719">Llamar ahora</a>
+              <a href="tel:+525559603719" className="flex items-center gap-2">
+                <Phone className="w-5 h-5" />
+                Llamar ahora
+              </a>
             </Button>
           </div>
         </div>
