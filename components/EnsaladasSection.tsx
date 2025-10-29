@@ -92,7 +92,9 @@ export default function EnsaladasSection() {
           />
         </div>
       </div>
-      <h3 className="text-3xl font-serif text-emerald-800 mb-4 font-semibold">Ensaladas</h3>
+      <h3 className="text-3xl font-serif text-emerald-800 mb-4 font-semibold">
+        Ensaladas
+      </h3>
       <Card className="bg-emerald-50 border-emerald-200">
         <CardContent className="p-6">
           <ul className="space-y-3 text-emerald-800 max-w-md mx-auto">
@@ -110,7 +112,9 @@ export default function EnsaladasSection() {
                   >
                     <div className="flex items-center gap-2">
                       <span className="text-emerald-600 text-lg">✓</span>
-                      <span className="text-emerald-900 font-medium">{salad.name}</span>
+                      <span className="text-emerald-900 font-medium">
+                        {salad.name}
+                      </span>
                     </div>
                     <div className="flex items-center gap-3">
                       <span className="text-emerald-700 font-semibold whitespace-nowrap">
@@ -125,8 +129,10 @@ export default function EnsaladasSection() {
                   </button>
                   {isOpen && (
                     <div className="px-4 pb-4">
-                      <p className="text-sm text-emerald-700 font-medium mb-2">Ingredientes:</p>
-                      <ul className="list-disc space-y-1 text-sm text-emerald-700 pl-5">
+                      <p className="text-sm text-emerald-700 font-medium mb-2 text-left">
+                        Ingredientes:
+                      </p>
+                      <ul className="list-disc space-y-1 text-sm text-emerald-700 pl-5 text-left">
                         {salad.ingredients.map((ingredient) => (
                           <li key={ingredient}>{ingredient}</li>
                         ))}
@@ -138,29 +144,51 @@ export default function EnsaladasSection() {
             })}
           </ul>
           <div className="mt-6 pt-4 border-t border-emerald-200 max-w-md mx-auto">
-            <p className="text-sm text-emerald-800 font-semibold mb-3 text-left">Opciones de Proteína:</p>
+            <p className="text-sm text-emerald-800 font-semibold mb-3 text-left">
+              Opciones de Proteína:
+            </p>
             <ul className="text-sm text-emerald-700 space-y-2">
               <li className="flex items-start justify-between gap-3 py-1.5 rounded-lg hover:bg-emerald-100/30 transition-colors">
-                <span className="flex-1 text-left">Atún (en agua)</span>
+                <span className="flex-1 text-left">Salmón</span>
                 <span className="font-medium whitespace-nowrap">$80</span>
               </li>
+
               <li className="flex items-start justify-between gap-3 py-1.5 rounded-lg hover:bg-emerald-100/30 transition-colors">
-                <span className="flex-1 text-left">Queso Panela</span>
-                <span className="font-medium whitespace-nowrap">$55</span>
-              </li>
-              <li className="flex items-start justify-between gap-3 py-1.5 rounded-lg hover:bg-emerald-100/30 transition-colors">
-                <span className="flex-1 text-left">Queso de Cabra</span>
-                <span className="font-medium whitespace-nowrap">$90</span>
-              </li>
-              <li className="py-1.5 text-left">Pechuga Asada / Empanizada</li>
-              <li className="py-1.5 text-left">Salmón</li>
-              <li className="flex items-start justify-between gap-3 py-1.5 rounded-lg hover:bg-emerald-100/30 transition-colors">
-                <span className="flex-1 text-left">Proteína Extra</span>
+                <span className="flex-1 text-left">Atún (en agua)</span>
                 <span className="font-medium whitespace-nowrap">$20</span>
               </li>
               <li className="flex items-start justify-between gap-3 py-1.5 rounded-lg hover:bg-emerald-100/30 transition-colors">
-                <span className="flex-1 text-left">Vegetal o crocante extra</span>
+                <span className="flex-1 text-left">Queso Panela</span>
+                <span className="font-medium whitespace-nowrap">$20</span>
+              </li>
+              <li className="flex items-start justify-between gap-3 py-1.5 rounded-lg hover:bg-emerald-100/30 transition-colors">
+                <span className="flex-1 text-left">Queso de Cabra</span>
+                <span className="font-medium whitespace-nowrap">$20</span>
+              </li>
+              <li className="flex items-start justify-between gap-3 py-1.5 rounded-lg hover:bg-emerald-100/30 transition-colors">
+                <span className="flex-1 text-left">
+                  Pechuga Asada / Empanizada
+                </span>
+                <span className="font-medium whitespace-nowrap">$20</span>
+              </li>
+
+              <li className="flex items-start justify-between gap-3 py-1.5 rounded-lg hover:bg-emerald-100/30 transition-colors">
+                <span className="flex-1 text-left">
+                  Vegetal o crocante extra
+                </span>
                 <span className="font-medium whitespace-nowrap">$7</span>
+              </li>
+              <li className="py-1.5 pl-2">
+                <p className="text-xs text-emerald-600 font-medium mb-2 text-left">
+                  Opciones de Crocante:
+                </p>
+                <ul className="text-xs text-emerald-700 space-y-1 pl-4">
+                  <li className="text-left">• Nuez</li>
+                  <li className="text-left">• Semilla de calabaza</li>
+                  <li className="text-left">• Almendras fileteadas</li>
+                  <li className="text-left">• Ajonjolí natural o garapiñado</li>
+                  <li className="text-left">• Arándano</li>
+                </ul>
               </li>
             </ul>
           </div>
@@ -172,5 +200,3 @@ export default function EnsaladasSection() {
     </div>
   );
 }
-
-
