@@ -39,8 +39,11 @@ export default function BebidasSection() {
       ],
     },
     {
-      name: "Aguas Frescas (470ml)",
-      price: 25,
+      name: "Aguas Frescas",
+      sizes: [
+        { size: "470ml", price: 25 },
+        { size: "1L", price: 40 },
+      ],
       options: [
         { name: "Pepino, Limón, Chia" },
         { name: "Avena, Canela, Nuez" },
@@ -68,7 +71,6 @@ export default function BebidasSection() {
   ];
 
   const bebidasSimples = [
-    { name: "Aguas Frescas (1L)", price: 40 },
     { name: "Capuchino", price: 45 },
     { name: "Café americano", price: 30 },
     { name: "Tizana Frío/Caliente", price: 50 },
@@ -113,9 +115,27 @@ export default function BebidasSection() {
                       </span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <span className="text-emerald-700 font-semibold whitespace-nowrap">
-                        ${bebida.price}
-                      </span>
+                      {"sizes" in bebida && bebida.sizes ? (
+                        <div className="text-sm text-emerald-700 flex gap-3">
+                          <span>
+                            {bebida.sizes[0].size}{" "}
+                            <span className="font-semibold">
+                              ${bebida.sizes[0].price}
+                            </span>
+                          </span>
+                          <span className="text-emerald-400">•</span>
+                          <span>
+                            {bebida.sizes[1]?.size}{" "}
+                            <span className="font-semibold">
+                              ${bebida.sizes[1]?.price}
+                            </span>
+                          </span>
+                        </div>
+                      ) : (
+                        <span className="text-emerald-700 font-semibold whitespace-nowrap">
+                          ${bebida.price}
+                        </span>
+                      )}
                       <ChevronDown
                         className={`h-4 w-4 text-emerald-600 transition-transform duration-200 ${
                           isOpen ? "rotate-180" : ""
