@@ -12,14 +12,18 @@ export default function AntojoSection() {
           />
         </div>
       </div>
-      <h3 className="text-3xl font-serif text-emerald-800 mb-4 font-semibold">Antojo</h3>
+      <h3 className="text-3xl font-serif text-emerald-800 mb-4 font-semibold">
+        Antojo
+      </h3>
       <Card className="bg-emerald-50 border-emerald-200">
         <CardContent className="p-6">
           <div className="space-y-3 text-emerald-800 max-w-md mx-auto">
             <div className="py-2 px-3 rounded-lg hover:bg-emerald-100/50 transition-colors text-center">
               <div className="flex items-center justify-center gap-2 mb-1">
                 <span className="text-emerald-600 text-lg">✓</span>
-                <span className="text-emerald-900 font-medium">Chilaquiles Verdes/Rojos</span>
+                <span className="text-emerald-900 font-medium">
+                  Chilaquiles Verdes/Rojos
+                </span>
               </div>
               <div className="text-sm text-emerald-700 flex gap-3 justify-center">
                 <span>
@@ -34,19 +38,35 @@ export default function AntojoSection() {
             <div className="py-2 px-3 rounded-lg hover:bg-emerald-100/50 transition-colors text-center">
               <div className="flex items-center justify-center gap-2 mb-1">
                 <span className="text-emerald-600 text-lg">✓</span>
-                <span className="text-emerald-900 font-medium">Torta de Chilaquiles Sencillos</span>
+                <span className="text-emerald-900 font-medium">
+                  Torta de Chilaquiles Sencillos
+                </span>
               </div>
-              <div className="text-sm text-emerald-700">
-                <span className="font-semibold">$50</span>
+              <div className="text-sm text-emerald-700 flex gap-3 justify-center">
+                <span>
+                  Solo <span className="font-semibold">$40</span>
+                </span>
+                <span className="text-emerald-400">•</span>
+                <span>
+                  Combo <span className="font-semibold">$70</span>
+                </span>
               </div>
             </div>
             <div className="py-2 px-3 rounded-lg hover:bg-emerald-100/50 transition-colors text-center">
               <div className="flex items-center justify-center gap-2 mb-1">
                 <span className="text-emerald-600 text-lg">✓</span>
-                <span className="text-emerald-900 font-medium">Torta de Chilaquiles c/ Milanesa</span>
+                <span className="text-emerald-900 font-medium">
+                  Torta de Chilaquiles c/ Milanesa
+                </span>
               </div>
-              <div className="text-sm text-emerald-700">
-                <span className="font-semibold">$90</span>
+              <div className="text-sm text-emerald-700 flex gap-3 justify-center">
+                <span>
+                  Solo <span className="font-semibold">$60</span>
+                </span>
+                <span className="text-emerald-400">•</span>
+                <span>
+                  Combo <span className="font-semibold">$90</span>
+                </span>
               </div>
             </div>
             <div className="py-2 px-3 rounded-lg hover:bg-emerald-100/50 transition-colors text-center">
@@ -80,13 +100,8 @@ export default function AntojoSection() {
               </div>
             </div>
           </div>
-          <div className="mt-4 bg-salmon-300 border border-salmon-400 rounded-full px-4 py-2 inline-block">
-            <span className="text-white font-semibold">Desde: $50.00 MXN</span>
-          </div>
         </CardContent>
       </Card>
     </div>
   );
 }
-
-

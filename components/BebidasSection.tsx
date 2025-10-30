@@ -30,8 +30,8 @@ export default function BebidasSection() {
       ],
     },
     {
-      name: "Licuados (150ml)",
-      price: 50,
+      name: "Licuados (470ml)",
+      price: 40,
       options: [
         {
           name: "Fresa, Plátano, Nuez, Amaranto, Cacao, Avena (con leche deslactosada)",
@@ -52,7 +52,7 @@ export default function BebidasSection() {
       ],
     },
     {
-      name: "Esquimo (470ml)",
+      name: "Esquimo",
       price: 40,
       options: [{ name: "Chocolate, Café, Vainilla, Nuez, Coco" }],
     },
@@ -184,9 +184,6 @@ export default function BebidasSection() {
               </li>
             ))}
           </ul>
-          <div className="mt-4 bg-salmon-300 border border-salmon-400 rounded-full px-4 py-2 inline-block">
-            <span className="text-white font-semibold">Desde: $25.00 MXN</span>
-          </div>
         </CardContent>
       </Card>
     </div>
