@@ -2,6 +2,18 @@ import { Button } from "@/components/ui/button";
 import { Instagram, MapPin, MessageCircle, Phone } from "lucide-react";
 
 export default function SiteFooter() {
+  const mapParams = {
+    q: "Calle renacimiento 371, Azcapotzalco, CDMX, Mexico",
+    output: "embed",
+  };
+
+  const searchParams = new URLSearchParams(
+    Object.fromEntries(
+      Object.entries(mapParams)
+        .filter(([_, v]) => (Array.isArray(v) ? v.length > 0 : v !== ""))
+        .map(([k, v]) => [k, String(v)])
+    )
+  ).toString();
   return (
     <section className="bg-emerald-800 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto text-center">
@@ -10,7 +22,10 @@ export default function SiteFooter() {
         <div className="space-y-6 mb-8">
           <div className="flex items-center justify-center space-x-3">
             <Phone className="w-5 h-5" />
-            <a href="tel:+525559603719" className="text-lg hover:text-emerald-200 transition-colors">
+            <a
+              href="tel:+525559603719"
+              className="text-lg hover:text-emerald-200 transition-colors"
+            >
               (55) 59-60-37-19
             </a>
           </div>
@@ -27,16 +42,32 @@ export default function SiteFooter() {
             </a>
           </div>
 
-          <div className="flex items-start justify-center space-x-3">
-            <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
-            <div className="text-center">
-              <p className="leading-relaxed">
-                Calle renacimiento 371, esquina faja de oro
-                <br />
-                Escuela Secundaria Diurna N° 50 Lázaro Cárdenas
-                <br />
-                Azcapotzalco, CDMX
-              </p>
+          <div className="flex flex-col items-center space-y-4">
+            <div className="flex items-start justify-center space-x-3">
+              <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
+              <div className="text-center">
+                <p className="text-sm leading-tight">
+                  Calle renacimiento 371, esquina faja de oro
+                  <br />
+                  Escuela Secundaria Diurna N° 50 Lázaro Cárdenas
+                  <br />
+                  Azcapotzalco, CDMX
+                </p>
+              </div>
+            </div>
+
+            <div className="w-full max-w-sm mx-auto">
+              <iframe
+                src={`https://maps.google.com/maps?${searchParams}`}
+                width="100%"
+                height="150"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-lg"
+                title="Mama Lechuga Cafeteria Location"
+              ></iframe>
             </div>
           </div>
         </div>
@@ -57,7 +88,10 @@ export default function SiteFooter() {
               WhatsApp
             </a>
           </Button>
-          <Button asChild className="bg-salmon-300 hover:bg-salmon-400 text-white">
+          <Button
+            asChild
+            className="bg-salmon-300 hover:bg-salmon-400 text-white"
+          >
             <a href="tel:+525559603719" className="flex items-center gap-2">
               <Phone className="w-5 h-5" />
               Llamar ahora
@@ -68,5 +102,3 @@ export default function SiteFooter() {
     </section>
   );
 }
-
-
