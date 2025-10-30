@@ -1,4 +1,4 @@
-import { MapPin } from "lucide-react";
+import { Map } from "lucide-react";
 import ContactButtons from "@/components/ContactButtons";
 
 export default function SiteFooter() {
@@ -20,13 +20,18 @@ export default function SiteFooter() {
   return (
     <section className="bg-emerald-800 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto text-center">
-        <h3 className="text-3xl font-serif mb-8 font-semibold">Contáctanos</h3>
+        <h3 className="text-3xl font-serif mb-6 font-semibold">Contáctanos</h3>
 
         <div className="space-y-6 mb-8">
-          <div className="flex flex-col items-center space-y-4">
-            <div className="flex items-start justify-center space-x-3">
-              <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-              <div className="text-center">
+          <div className="flex flex-col items-center space-y-4 mb-6">
+            <div className="flex items-center justify-center gap-2 mb-6">
+              <Map className="w-5 h-5" />
+              <a
+                href={`https://maps.google.com/maps?${searchParams}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-center hover:text-emerald-200 transition-colors"
+              >
                 <p className="text-sm leading-tight">
                   Calle Faja de Oro 371, esq. Renacimiento
                   <br />
@@ -34,7 +39,7 @@ export default function SiteFooter() {
                   <br />
                   Azcapotzalco, CDMX
                 </p>
-              </div>
+              </a>
             </div>
 
             <div className="w-full max-w-sm mx-auto">
