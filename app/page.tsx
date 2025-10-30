@@ -1,19 +1,12 @@
-import {
-  Phone,
-  Instagram,
-  MapPin,
-  FileText,
-  MessageCircle,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import EnsaladasSection from "@/components/EnsaladasSection";
 import DesayunosSection from "@/components/DesayunosSection";
 import AntojoSection from "@/components/AntojoSection";
 import BebidasSection from "@/components/BebidasSection";
 import SiteFooter from "@/components/SiteFooter";
+import ContactButtons from "@/components/ContactButtons";
 
 export default function HomePage() {
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-stone-50 via-emerald-50/30 to-salmon-50/40">
       {/* Header with Logo */}
@@ -33,38 +26,7 @@ export default function HomePage() {
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-row gap-3 justify-center items-center max-w-2xl mx-auto px-4">
-          <Button
-            asChild
-            className="bg-salmon-300 hover:bg-salmon-400 text-white font-semibold shadow-lg hover:shadow-xl transition-all flex-1"
-            size="lg"
-          >
-            <a
-              href="/menu.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2"
-            >
-              <FileText className="w-5 h-5" />
-              Ver Menú
-            </a>
-          </Button>
-          <Button
-            asChild
-            className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all flex-1"
-            size="lg"
-          >
-            <a
-              href="https://wa.me/525559603719"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2"
-            >
-              <MessageCircle className="w-5 h-5" />
-              WhatsApp
-            </a>
-          </Button>
-        </div>
+        <ContactButtons />
       </header>
 
       {/* Hero Section */}
