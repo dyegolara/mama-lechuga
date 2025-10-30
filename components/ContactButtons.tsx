@@ -3,7 +3,7 @@ import {
   Instagram,
   MessageCircle,
   Phone,
-  Map,
+  MapPin,
   Facebook,
   FileText,
 } from "lucide-react";
@@ -125,7 +125,7 @@ export default function ContactButtons({
               rel="noopener noreferrer"
               className="flex items-center gap-2"
             >
-              <Map className="w-5 h-5" />
+              <MapPin className="w-5 h-5" />
             </a>
           </Button>
         </div>
@@ -209,7 +209,7 @@ export default function ContactButtons({
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2"
           >
-            <Map className="w-5 h-5" />
+            <MapPin className="w-5 h-5" />
             Maps
           </a>
         </Button>
