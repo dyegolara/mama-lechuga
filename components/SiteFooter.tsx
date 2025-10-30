@@ -3,8 +3,10 @@ import { Instagram, MapPin, MessageCircle, Phone } from "lucide-react";
 
 export default function SiteFooter() {
   const mapParams = {
-    q: "Calle renacimiento 371, Azcapotzalco, CDMX, Mexico",
+    q: "Calle Faja de Oro 371, Azcapotzalco, CDMX, Mexico",
     output: "embed",
+    z: "17",
+    layer: "r",
   };
 
   const searchParams = new URLSearchParams(
@@ -47,7 +49,7 @@ export default function SiteFooter() {
               <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
               <div className="text-center">
                 <p className="text-sm leading-tight">
-                  Calle renacimiento 371, esquina faja de oro
+                  Calle Faja de Oro 371, esq. Renacimiento
                   <br />
                   Escuela Secundaria Diurna N° 50 Lázaro Cárdenas
                   <br />
