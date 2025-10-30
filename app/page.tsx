@@ -26,7 +26,7 @@ export default function HomePage() {
         </p>
 
         {/* CTA Buttons */}
-        <ContactButtons />
+        <ContactButtons variant="header" />
       </header>
 
       {/* Hero Section */}
