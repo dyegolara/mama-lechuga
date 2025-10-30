@@ -192,9 +192,6 @@ export default function EnsaladasSection() {
               </li>
             </ul>
           </div>
-          <div className="mt-4 bg-salmon-300 border border-salmon-400 rounded-full px-4 py-2 inline-block">
-            <span className="text-white font-semibold">Desde: $105.00 MXN</span>
-          </div>
         </CardContent>
       </Card>
     </div>
