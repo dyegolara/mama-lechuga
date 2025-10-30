@@ -35,7 +35,7 @@ export default function ContactButtons({
 
   if (variant === "header") {
     return (
-      <div className="w-full mx-auto px-4 space-y-6 pt-4">
+      <div className="space-y-6 pt-4">
         <div className="flex gap-3">
           <Button
             asChild

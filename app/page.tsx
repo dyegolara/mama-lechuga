@@ -11,22 +11,24 @@ export default function HomePage() {
     <div className="min-h-screen bg-gradient-to-br from-stone-50 via-emerald-50/30 to-salmon-50/40">
       {/* Header with Logo */}
       <header className="text-center py-8 px-4">
-        <div className="mb-4">
-          <img
-            src="/mama-lechuga-mascot.png"
-            alt="Mascota Mamá Lechuga"
-            className="w-40 h-60 mx-auto mb-4 rounded-full object-cover"
-          />
-        </div>
-        <h1 className="font-serif text-5xl md:text-6xl text-emerald-800 mb-2 text-balance">
-          Mamá Lechuga
-        </h1>
-        <p className="font-serif text-xl md:text-2xl text-salmon-300 italic font-medium mb-6">
-          de la madre naturaleza a tu mesa...
-        </p>
+        <div className="max-w-4xl mx-auto">
+          <div className="mb-4">
+            <img
+              src="/mama-lechuga-mascot.png"
+              alt="Mascota Mamá Lechuga"
+              className="w-40 h-60 mx-auto mb-4 rounded-full object-cover"
+            />
+          </div>
+          <h1 className="font-serif text-5xl md:text-6xl text-emerald-800 mb-2 text-balance">
+            Mamá Lechuga
+          </h1>
+          <p className="font-serif text-xl md:text-2xl text-salmon-300 italic font-medium mb-6">
+            de la madre naturaleza a tu mesa...
+          </p>
 
-        {/* CTA Buttons */}
-        <ContactButtons variant="header" />
+          {/* CTA Buttons */}
+          <ContactButtons variant="header" />
+        </div>
       </header>
 
       {/* Hero Section */}
