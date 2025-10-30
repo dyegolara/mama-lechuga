@@ -3,9 +3,10 @@ import { Instagram, MapPin, MessageCircle, Phone } from "lucide-react";
 
 export default function SiteFooter() {
   const mapParams = {
-    q: "Calle Faja de Oro 371, Azcapotzalco, CDMX, Mexico",
-    output: "embed",
+    q: "Ensaladas Mamá Lechuga",
+    ll: "19.4857999,-99.2021597",
     z: "17",
+    output: "embed",
     layer: "r",
   };
 
