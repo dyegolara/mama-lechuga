@@ -7,18 +7,14 @@ import { Card, CardContent } from "@/components/ui/card";
 export default function DesayunosSection() {
   const desayunos = [
     {
-      name: "Sandwich",
+      name: "Omelette",
       solo: 75,
       combo: 115,
       ingredients: [
-        "Jamón",
-        "Lechuga",
-        "Jitomate",
-        "Queso Panela",
-        "Chiles en vinagre",
-        "Aguacate",
-        "Germen de trigo",
+        "Relleno de queso manchego, espinaca y cebolla",
+        "Relleno de jamón y queso",
       ],
+      sides: ["Sobre una cama de lechuga, acompañado de frijoles refritos"],
     },
     {
       name: "Cuernito",
@@ -34,12 +30,19 @@ export default function DesayunosSection() {
       ],
     },
     {
-      name: "Omelette",
-      solo: 80,
+      name: "Sandwich",
+      solo: 45,
+      combo: 80,
+      ingredients: [
+        "Jamón (lechuga, jitomate, queso Panela, chiles en vinagre, aguacate, germen de trigo)",
+        "Ensalada de Atún (apio, mayonesa, granos de elote, chiles en vinagre, lechuga)",
+      ],
+    },
+    {
+      name: "Huevito a la Mexicana",
+      solo: 75,
       combo: 115,
       ingredients: [
-        "Relleno de queso manchego, espinaca y cebolla",
-        "Relleno de jamón y queso",
         "Sobre una cama de lechuga",
         "Acompañado de frijoles refritos",
       ],
@@ -60,23 +63,14 @@ export default function DesayunosSection() {
     },
     {
       name: "Dobladita de Jamón y Queso",
-      solo: 45,
-      combo: 80,
+      solo: 55,
+      combo: 90,
       ingredients: [
         "Tortilla de Avena y espinaca",
         "Jamón",
         "Queso manchego",
         "Lechuga",
         "Acompañada de frijoles refritos",
-      ],
-    },
-    {
-      name: "Huevito a la Mexicana",
-      solo: 75,
-      combo: 115,
-      ingredients: [
-        "Sobre una cama de lechuga",
-        "Acompañado de frijoles refritos",
       ],
     },
   ];
@@ -144,14 +138,19 @@ export default function DesayunosSection() {
                           <li key={ingredient}>{ingredient}</li>
                         ))}
                       </ul>
+                      {"sides" in item && item.sides && (
+                        <div className="mt-3 pt-3 border-t border-emerald-300 text-xs text-emerald-700">
+                          <p className="font-medium mb-1 text-left">
+                            Acompañado con:
+                          </p>
+                          <p className="text-left">{item.sides.join(", ")}</p>
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>
               );
             })}
-          </div>
-          <div className="mt-4 bg-salmon-300 border border-salmon-400 rounded-full px-4 py-2 inline-block">
-            <span className="text-white font-semibold">Desde: $45.00 MXN</span>
           </div>
         </CardContent>
       </Card>
