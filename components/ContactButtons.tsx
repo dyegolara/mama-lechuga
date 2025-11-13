@@ -1,12 +1,7 @@
 import { Button } from "@/components/ui/button";
-import {
-  LuInstagram,
-  LuMessageCircle,
-  LuPhone,
-  LuMapPin,
-  LuFileText,
-} from "react-icons/lu";
-import { FaTiktok, FaFacebook } from "react-icons/fa";
+import { LuInstagram, LuPhone, LuFileText } from "react-icons/lu";
+import { FaTiktok, FaFacebook, FaWhatsapp } from "react-icons/fa";
+import { SiGooglemaps } from "react-icons/si";
 
 interface ContactButtonsProps {
   variant?: "header" | "footer";
@@ -56,37 +51,22 @@ export default function ContactButtons({
           </Button>
           <Button
             asChild
-            variant="ghost"
-            className="text-lime-600 hover:text-lime-700 hover:bg-lime-50 font-semibold flex-1"
-            size="lg"
-          >
-            <a
-              href={`tel:+525559603719?utm_source=${UTM_SOURCE}`}
-              className="flex items-center gap-2"
-            >
-              {/* @ts-ignore react-icons type issue */}
-              <LuPhone className="w-5 h-5" />
-              (55) 59-60-37-19
-            </a>
-          </Button>
-        </div>
-        <div className="flex justify-between gap-4 px-6">
-          <Button
-            asChild
-            variant="ghost"
-            className="text-emerald-600 hover:text-emerald-700 hover:bg-emerald-50 font-semibold"
+            className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all  flex-1"
             size="lg"
           >
             <a
               href={`https://wa.me/525559603719?utm_source=${UTM_SOURCE}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2"
+              className="flex items-center justify-center gap-2"
             >
               {/* @ts-ignore react-icons type issue */}
-              <LuMessageCircle className="w-5 h-5" />
+              <FaWhatsapp className="w-5 h-5" />
+              WhatsApp
             </a>
           </Button>
+        </div>
+        <div className="flex justify-between gap-4 px-6">
           <Button
             asChild
             variant="ghost"
@@ -148,7 +128,22 @@ export default function ContactButtons({
               className="flex items-center gap-2"
             >
               {/* @ts-ignore react-icons type issue */}
-              <LuMapPin className="w-5 h-5" />
+              <SiGooglemaps className="w-5 h-5" />
+            </a>
+          </Button>
+          <Button
+            asChild
+            variant="ghost"
+            className="text-lime-600 hover:text-lime-700 hover:bg-lime-50 font-semibold"
+            size="lg"
+          >
+            <a
+              href={`tel:+525559603719?utm_source=${UTM_SOURCE}`}
+              className="flex items-center gap-2"
+            >
+              {/* @ts-ignore react-icons type issue */}
+              <LuPhone className="w-5 h-5" />
+              <span className="hidden sm:inline">(55) 59-60-37-19</span>
             </a>
           </Button>
         </div>
@@ -186,7 +181,7 @@ export default function ContactButtons({
             className="flex items-center justify-center gap-2"
           >
             {/* @ts-ignore react-icons type issue */}
-            <LuMessageCircle className="w-5 h-5" />
+            <FaWhatsapp className="w-5 h-5" />
             WhatsApp
           </a>
         </Button>
@@ -253,7 +248,7 @@ export default function ContactButtons({
             className="flex items-center justify-center gap-2"
           >
             {/* @ts-ignore react-icons type issue */}
-            <LuMapPin className="w-5 h-5" />
+            <SiGooglemaps className="w-5 h-5" />
             Maps
           </a>
         </Button>
