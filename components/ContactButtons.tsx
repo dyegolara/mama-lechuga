@@ -17,8 +17,6 @@ export default function ContactButtons({
     q: "Ensaladas Mamá Lechuga",
     ll: "19.4857999,-99.2021597",
     z: "17",
-    output: "embed",
-    layer: "r",
   };
 
   const searchParams = new URLSearchParams(
