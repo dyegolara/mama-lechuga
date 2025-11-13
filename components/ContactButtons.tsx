@@ -1,17 +1,18 @@
 import { Button } from "@/components/ui/button";
 import {
-  Instagram,
-  MessageCircle,
-  Phone,
-  MapPin,
-  Facebook,
-  FileText,
-} from "lucide-react";
+  LuInstagram,
+  LuMessageCircle,
+  LuPhone,
+  LuMapPin,
+  LuFileText,
+} from "react-icons/lu";
+import { FaTiktok, FaFacebook } from "react-icons/fa";
 
 interface ContactButtonsProps {
   variant?: "header" | "footer";
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function ContactButtons({
   variant = "footer",
 }: ContactButtonsProps) {
@@ -48,7 +49,8 @@ export default function ContactButtons({
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2"
             >
-              <FileText className="w-5 h-5" />
+              {/* @ts-ignore react-icons type issue */}
+              <LuFileText className="w-5 h-5" />
               Ver Menú
             </a>
           </Button>
@@ -62,7 +64,8 @@ export default function ContactButtons({
               href={`tel:+525559603719?utm_source=${UTM_SOURCE}`}
               className="flex items-center gap-2"
             >
-              <Phone className="w-5 h-5" />
+              {/* @ts-ignore react-icons type issue */}
+              <LuPhone className="w-5 h-5" />
               (55) 59-60-37-19
             </a>
           </Button>
@@ -80,7 +83,8 @@ export default function ContactButtons({
               rel="noopener noreferrer"
               className="flex items-center gap-2"
             >
-              <MessageCircle className="w-5 h-5" />
+              {/* @ts-ignore react-icons type issue */}
+              <LuMessageCircle className="w-5 h-5" />
             </a>
           </Button>
           <Button
@@ -95,7 +99,8 @@ export default function ContactButtons({
               rel="noopener noreferrer"
               className="flex items-center gap-2"
             >
-              <Instagram className="w-5 h-5" />
+              {/* @ts-ignore react-icons type issue */}
+              <LuInstagram className="w-5 h-5" />
             </a>
           </Button>
           <Button
@@ -110,7 +115,24 @@ export default function ContactButtons({
               rel="noopener noreferrer"
               className="flex items-center gap-2"
             >
-              <Facebook className="w-5 h-5" />
+              {/* @ts-ignore react-icons type issue */}
+              <FaFacebook className="w-5 h-5" />
+            </a>
+          </Button>
+          <Button
+            asChild
+            variant="ghost"
+            className="text-black hover:text-gray-700 hover:bg-gray-50 font-semibold"
+            size="lg"
+          >
+            <a
+              href={`https://www.tiktok.com/@mam.lechuga?utm_source=${UTM_SOURCE}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2"
+            >
+              {/* @ts-ignore react-icons type issue */}
+              <FaTiktok className="w-5 h-5" />
             </a>
           </Button>
           <Button
@@ -125,7 +147,8 @@ export default function ContactButtons({
               rel="noopener noreferrer"
               className="flex items-center gap-2"
             >
-              <MapPin className="w-5 h-5" />
+              {/* @ts-ignore react-icons type issue */}
+              <LuMapPin className="w-5 h-5" />
             </a>
           </Button>
         </div>
@@ -146,7 +169,8 @@ export default function ContactButtons({
             href={`tel:+525559603719?utm_source=${UTM_SOURCE}`}
             className="flex items-center justify-center gap-2"
           >
-            <Phone className="w-5 h-5" />
+            {/* @ts-ignore react-icons type issue */}
+            <LuPhone className="w-5 h-5" />
             (55) 59-60-37-19
           </a>
         </Button>
@@ -161,12 +185,13 @@ export default function ContactButtons({
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2"
           >
-            <MessageCircle className="w-5 h-5" />
+            {/* @ts-ignore react-icons type issue */}
+            <LuMessageCircle className="w-5 h-5" />
             WhatsApp
           </a>
         </Button>
       </div>
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-4 gap-3">
         <Button
           asChild
           className="bg-pink-600 hover:bg-pink-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all"
@@ -178,7 +203,8 @@ export default function ContactButtons({
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2"
           >
-            <Instagram className="w-5 h-5" />
+            {/* @ts-ignore react-icons type issue */}
+            <LuInstagram className="w-5 h-5" />
             Instagram
           </a>
         </Button>
@@ -193,8 +219,25 @@ export default function ContactButtons({
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2"
           >
-            <Facebook className="w-5 h-5" />
+            {/* @ts-ignore react-icons type issue */}
+            <FaFacebook className="w-5 h-5" />
             Facebook
+          </a>
+        </Button>
+        <Button
+          asChild
+          className="bg-black hover:bg-gray-800 text-white font-semibold shadow-lg hover:shadow-xl transition-all"
+          size="lg"
+        >
+          <a
+            href={`https://www.tiktok.com/@mam.lechuga?utm_source=${UTM_SOURCE}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2"
+          >
+            {/* @ts-ignore react-icons type issue */}
+            <FaTiktok className="w-5 h-5" />
+            TikTok
           </a>
         </Button>
         <Button
@@ -209,7 +252,8 @@ export default function ContactButtons({
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2"
           >
-            <MapPin className="w-5 h-5" />
+            {/* @ts-ignore react-icons type issue */}
+            <LuMapPin className="w-5 h-5" />
             Maps
           </a>
         </Button>

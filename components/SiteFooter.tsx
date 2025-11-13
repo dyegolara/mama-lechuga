@@ -1,4 +1,4 @@
-import { Map } from "lucide-react";
+import { LuMap } from "react-icons/lu";
 import ContactButtons from "@/components/ContactButtons";
 
 export default function SiteFooter() {
@@ -25,7 +25,8 @@ export default function SiteFooter() {
         <div className="space-y-6 mb-8">
           <div className="flex flex-col items-center space-y-4 mb-6">
             <div className="flex items-center justify-center gap-2 mb-6">
-              <Map className="w-5 h-5" />
+              {/* @ts-ignore react-icons type issue */}
+              <LuMap className="w-5 h-5" />
               <a
                 href={`https://maps.google.com/maps?${searchParams}`}
                 target="_blank"

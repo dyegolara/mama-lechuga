@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { LuChevronDown } from "react-icons/lu";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function EnsaladasSection() {
@@ -120,7 +120,8 @@ export default function EnsaladasSection() {
                       <span className="text-emerald-700 font-semibold whitespace-nowrap">
                         ${salad.price}
                       </span>
-                      <ChevronDown
+                      {/* @ts-ignore react-icons type issue */}
+                      <LuChevronDown
                         className={`h-4 w-4 text-emerald-600 transition-transform duration-200 ${
                           isOpen ? "rotate-180" : ""
                         }`}

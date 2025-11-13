@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { LuChevronDown } from "react-icons/lu";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function DesayunosSection() {
@@ -124,7 +124,8 @@ export default function DesayunosSection() {
                           <span className="font-semibold">${item.combo}</span>
                         </span>
                       </div>
-                      <ChevronDown
+                      {/* @ts-ignore react-icons type issue */}
+                      <LuChevronDown
                         className={`h-4 w-4 text-emerald-600 transition-transform duration-200 ${
                           isOpen ? "rotate-180" : ""
                         }`}
